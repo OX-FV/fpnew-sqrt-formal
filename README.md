@@ -24,9 +24,9 @@ make jg
 
 ## File layout
 
-`formal_fpnew_top.sv` contains all the SVAs needed to prove correctness. The only assumption used is that the custom Fpnew rounding modes "ROD" and "DYN" are not used. These rounding modes are not standard RISC-V rounding modes and are not supported by the C910 DivSqrt unit.
+`formal/formal_fpnew_top.sv` contains all the SVAs needed to prove correctness. The only assumption used is that the custom Fpnew rounding modes "ROD" and "DYN" are not used. These rounding modes are not standard RISC-V rounding modes and are not supported by the C910 DivSqrt unit.
 
-`output-final_aristotle` is the Lean project where the proof is finalised. As the name suggests, it was mostly produced by the AI tool [Aristotle](https://aristotle.harmonic.fun/dashboard).
+`formal/output-final_aristotle` is the Lean project where the proof is finalised. As the name suggests, it was mostly produced by the AI tool [Aristotle](https://aristotle.harmonic.fun/dashboard).
 
 #### More about `formal_fpnew_top.sv`:
 
