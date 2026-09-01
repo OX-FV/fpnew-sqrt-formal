@@ -1,3 +1,11 @@
+# Copyright 2026 University of Oxford.
+# Licensed under the Apache License, Version 2.0 (see LICENSE for details).
+# The underlying commands and reports of this script are copyrighted by Cadence.
+# We thank Cadence for granting permission to share our research to help
+# promote and foster the next generation of innovators.
+# Original Author: Ashraf Alam
+# SPDX-License-Identifier: Apache-2.0
+
 assume -from_assert <embedded>::formal_fpnew_top.OpStable
 assume -from_assert <embedded>::formal_fpnew_top.Sqrt64BStable
 assume -from_assert <embedded>::formal_fpnew_top.BaseCase
@@ -26,4 +34,15 @@ stopat i_fpnew_top.gen_operation_groups(1).i_opgroup_block.gen_merged_slice.i_mu
 stopat q
 stopat i_fpnew_top.gen_operation_groups(1).i_opgroup_block.gen_merged_slice.i_multifmt_slice.gen_num_lanes(0).active_lane.lane_instance.gen_thmulti_c910_divsqrt.i_fpnew_divsqrt_th_64_c910.i_ct_vfdsu_top.x_ct_vfdsu_double.x_ct_vfdsu_srt.x_ct_vfdsu_srt_radix16_with_sqrt.srt_sm_on
 
-prove -property {<embedded>::formal_fpnew_top.R_correct} -bg
+# Recommended settings for word-level engines
+set_proofmaster off             ;# machine learning - is off by default
+set_proofgrid_max_jobs 21
+set_proofgrid_max_local_jobs 21
+set_word_level_engine_flow on
+set_engineWL_processes 21
+
+# Prove using word-level engines
+prove -engine WHp -property {<embedded>::formal_fpnew_top.R_correct} -bg
+prove -engine WA2 -property {<embedded>::formal_fpnew_top.R_correct} -bg
+
+# prove -property {<embedded>::formal_fpnew_top.R_correct} -bg

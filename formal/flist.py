@@ -1,5 +1,10 @@
 '''
-Original author: Louis-Emile Ploix
+Copyright 2026 University of Oxford.
+Licensed under the Apache License, Version 2.0 (see LICENSE for details).
+Original Author: Louis-Emile Ploix
+SPDX-License-Identifier: Apache-2.0
+
+
 
 This is a utility program for handling filelists, such as formal.flist. It
 1. Reads and parses filelists

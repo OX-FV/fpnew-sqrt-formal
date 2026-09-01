@@ -1,4 +1,7 @@
-// Original author: Ashraf Alam, University of Oxford
+// Copyright 2026 University of Oxford.
+// Licensed under the Apache License, Version 2.0 (see LICENSE for details).
+// Original Author: Ashraf Alam
+// SPDX-License-Identifier: Apache-2.0
 
 module formal_fpnew_top#(
   // FPU configuration
@@ -438,8 +441,8 @@ OpNonZero: assert property (no_special -> `TH.srcf0_q[WE+WF-1:0] != '0);
 // // This is a bug to do with the handshaking signals. My proof does not talk about these signals.
 
 
-// R_correct: assert property (((`FIRST || `MIDDLE || `LAST) && `SQRT_64B) -> (R << (56-4*j)) == (X << 56) - Q*Q);
-// To attempt a proof of this using relevant assumptions and stopats, run source r_correct.tcl
+R_correct: assert property (((`FIRST || `MIDDLE || `LAST) && `SQRT_64B) -> (R << (56-4*j)) == (X << 56) - Q*Q);
+// To attempt a proof of this using relevant assumptions and stopats, uncomment R_correct and run source r_correct.tcl
 // This proof attempt timed out after 24 hours.
 
 endmodule

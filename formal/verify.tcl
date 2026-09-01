@@ -1,3 +1,11 @@
+# Copyright 2026 University of Oxford.
+# Licensed under the Apache License, Version 2.0 (see LICENSE for details).
+# The underlying commands and reports of this script are copyrighted by Cadence.
+# We thank Cadence for granting permission to share our research to help
+# promote and foster the next generation of innovators.
+# Original Authors: Louis-Emile Ploix, Ashraf Alam
+# SPDX-License-Identifier: Apache-2.0
+
 clear -all ;# Make this file reloadable
 
 # Enable broad caching of proof results.

@@ -1,3 +1,8 @@
+# Copyright 2026 University of Oxford.
+# Licensed under the Apache License, Version 2.0 (see LICENSE for details).
+# Original Authors: Louis-Emile Ploix, Ashraf Alam
+# SPDX-License-Identifier: Apache-2.0
+
 FPNEW_ROOT=..
 export FPNEW_REPO_DIR=${FPNEW_ROOT}
 
