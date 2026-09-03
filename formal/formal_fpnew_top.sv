@@ -441,7 +441,7 @@ OpNonZero: assert property (no_special -> `TH.srcf0_q[WE+WF-1:0] != '0);
 // // This is a bug to do with the handshaking signals. My proof does not talk about these signals.
 
 
-R_correct: assert property (((`FIRST || `MIDDLE || `LAST) && `SQRT_64B) -> (R << (56-4*j)) == (X << 56) - Q*Q);
+// R_correct: assert property (((`FIRST || `MIDDLE || `LAST) && `SQRT_64B) -> (R << (56-4*j)) == (X << 56) - Q*Q);
 // To attempt a proof of this using relevant assumptions and stopats, uncomment R_correct and run source r_correct.tcl
 // This proof attempt timed out after 24 hours.
 
