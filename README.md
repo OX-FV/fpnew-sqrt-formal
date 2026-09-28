@@ -1,4 +1,4 @@
-# Proof of floating point square root
+# Proof of Fpnew floating point square root
 
 ## The top level property proven
 
@@ -6,7 +6,7 @@ When the DivSqrt unit signals that a 64-bit square root operation has been compl
 
 ## General proof strategy
 
-We prove SystemVerilog Assertions (SVAs) about the RTL using Jasper. These SVAs should be enough to mathematically imply that the operations are correct. We translate the SVAs into Lean, and prove a top level correctness theorem in Lean using the translated SVA as assumptions.
+We prove SystemVerilog Assertions (SVAs) about the RTL using Jasper. These SVAs should be enough to mathematically imply that the operations are correct. We translate the SVAs into Lean, and prove a top level correctness theorem in Lean using the translated SVA as assumptions. More details of this methodology may be found in the paper `methodology_paper.pdf`.
 
 ## Setup
 
@@ -34,5 +34,5 @@ It should be noted that the top level property does not tell us that if the unit
 
 ## The hardware design
 
-The unit itself is the DivSqrt unit used in the [T-Head XuanTie C910](https://github.com/XUANTIE-RV/openc910) open source 64-bit RISC-V processor. It is one of three DivSqrt units supported by Fpnew.
+The unit itself is the DivSqrt unit used in the [T-Head XuanTie C910](https://github.com/XUANTIE-RV/openc910) open source 64-bit RISC-V processor. It is one of three DivSqrt units supported by Fpnew and the unit used in Fpnew with its default parameters.
 
