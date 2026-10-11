@@ -1,4 +1,4 @@
-# Proof of Fpnew floating point square root
+# Proof of FPnew floating point square root
 
 ## The top level property proven
 
